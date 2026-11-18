@@ -195,11 +195,11 @@ export const DocumentPreview: React.FC<DocumentPreviewProps> = ({
               }}
             >
               {/* Official Axis Bank SOP Document Header */}
-              <div className="border-b-4 border-[#97144D] px-6 py-5 bg-gradient-to-r from-white via-white to-[#F9EFF3]/50">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-center gap-3">
+              <div className="border-b-4 border-[#97144D] px-4 sm:px-6 py-5 bg-gradient-to-r from-white via-white to-[#F9EFF3]/50">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
+                  <div className="flex min-w-0 items-center gap-3">
                     <AxisLogo variant="burgundy" size="md" />
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-[11px] font-bold uppercase tracking-wider text-[#97144D]">
                         Axis Bank Limited · Retail Operations (GRAP)
                       </p>
@@ -208,12 +208,12 @@ export const DocumentPreview: React.FC<DocumentPreviewProps> = ({
                       </h4>
                     </div>
                   </div>
-                  <div className="text-right shrink-0">
-                    <span className="inline-flex items-center gap-1 rounded bg-[#F9EFF3] px-2 py-0.5 text-[11px] font-bold text-[#97144D] border border-[#97144D]/20">
+                  <div className="text-left sm:text-right">
+                    <span className="inline-flex max-w-full flex-wrap items-center gap-1 rounded bg-[#F9EFF3] px-2 py-0.5 text-[11px] font-bold text-[#97144D] border border-[#97144D]/20 break-words">
                       <ShieldCheck className="h-3 w-3" />
                       {fallbackDocSections.classification}
                     </span>
-                    <p className="mt-1 text-[11px] font-semibold text-slate-500 font-mono-tabular">
+                    <p className="mt-1 break-all text-[11px] font-semibold text-slate-500 font-mono-tabular">
                       Doc ID: {fallbackDocSections.documentCode}
                     </p>
                   </div>
