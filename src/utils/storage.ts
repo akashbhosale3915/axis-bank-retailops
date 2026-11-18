@@ -1,4 +1,4 @@
-import { SEED_SOPS, SSO_PERSONAS } from '../data/seedData';
+import { SEED_SOPS } from '../data/seedData';
 import { SOPFileAttachment, SOPRecord, UserProfile } from '../types/sop';
 import { validateSopFileExtension } from './sopRules';
 
@@ -47,16 +47,14 @@ export function loadActiveUser(): UserProfile | null {
   try {
     const raw = localStorage.getItem(USER_STORAGE_KEY);
     if (raw === null) {
-      const defaultUser = SSO_PERSONAS[0];
-      localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(defaultUser));
-      return defaultUser;
+      return null;
     }
     if (raw === 'SIGNED_OUT') {
       return null;
     }
     return JSON.parse(raw) as UserProfile;
   } catch {
-    return SSO_PERSONAS[0];
+    return null;
   }
 }
 
