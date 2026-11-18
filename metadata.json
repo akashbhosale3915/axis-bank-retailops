@@ -1,0 +1,6 @@
+{
+  "name": "Axis Bank RetailOps – GRAP: SOP Management",
+  "description": "Axis Bank RetailOps GRAP Governance Portal for Standard Operating Procedure lifecycle management, maker-checker review workflows, document preview, and audit trails.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
